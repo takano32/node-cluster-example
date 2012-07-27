@@ -1,7 +1,7 @@
 cluster = require 'cluster'
 app = require './app'
 
-cluster app.
+(cluster app).
 	use(cluster.logger 'logs').
 	use(cluster.stats()).
 	use(cluster.pidfiles 'pids').
